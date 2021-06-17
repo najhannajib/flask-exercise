@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+        <label for="username">username:</label><br>
+        <input type="text" id="username" name="username" ><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="pw" name="pw" ><br><br>
+        <input type="submit" value="Submit">
+    </form> 
+    <br><br>
+    <h1>Send message</h1>
+    <form action="/mesg" method="POST">
+        <label for="msg">Message:</label><br>
+        <input type="text" id="msg" name="msg" ><br>
+        <input type="submit" value="Submit">
+    </form> 
+    <br><br>
+    <h1>Upload</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="username">files:</label><br>
+        <input type="file" id="filee" name="files" ><br>
+        <input type="submit" value="Submit">
+    </form> 
+{% endblock %}
