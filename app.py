@@ -24,14 +24,14 @@ def mesg():
     if request.method == 'POST':
         msg=request.form["msg"]
         print(request.form["msg"])
-        account_sid = "AC0e734015c6d217cbde2f7cb3b749a670"
-        auth_token = "312beff834e6dfb101e11758c6812b88"
+        account_sid = "acc_token"
+        auth_token = "auth_token"
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
-                              from_='+18454201095',
+                              from_='phone_number',
                               body=msg,
-                              to='+60122263479'
+                              to='+60124290640'
                           )
         print(message)                
         return render_template('test.html')
